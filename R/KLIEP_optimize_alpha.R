@@ -9,7 +9,8 @@ KLIEP_optimize_alpha <- function(phi_x, phi_y, mean_phi_y) {
   } else {
     b <- matrix(colMeans(phi_y))
   }
-  c <- b / crossprod(b)[1,1]
+  nb <- norm(b)
+  c <- b / nb / nb
 
   kernel_num <- ncol(phi_x)
   max_iteration <- 100
