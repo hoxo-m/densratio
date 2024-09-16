@@ -46,8 +46,8 @@ KLIEP <- function(x1, x2, sigma = "auto", kernel_num = 100, fold = 5, verbose = 
                  fold = fold,
                  compute_density_ratio = function(x) {
                    if(is.vector(x)) x <- matrix(x)
-                   phi_x1 <- compute_kernel_Gaussian(x1, centers, sigma)
-                   density_ratio <- as.vector(phi_x1 %*% kernel_weights)
+                   phi_x <- compute_kernel_Gaussian(x, centers, sigma)
+                   density_ratio <- as.vector(phi_x %*% kernel_weights)
                    density_ratio
                  }
   )
