@@ -4,9 +4,17 @@
 \alias{densratio}
 \title{Estimate Density Ratio p(x)/q(x)}
 \usage{
-densratio(x1, x2, method = c("uLSIF", "RuLSIF", "KLIEP"),
-  sigma = "auto", lambda = "auto", alpha = 0.1, kernel_num = 100,
-  fold = 5, verbose = TRUE)
+densratio(
+  x1,
+  x2,
+  method = c("uLSIF", "RuLSIF", "KLIEP"),
+  sigma = "auto",
+  lambda = "auto",
+  alpha = 0.1,
+  kernel_num = 100,
+  fold = 5,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x1}{numeric vector or matrix. Data from a numerator distribution p(x).}

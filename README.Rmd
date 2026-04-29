@@ -1,9 +1,5 @@
 ---
-output: 
-  md_document:
-    variant: gfm
-  html_document:
-    keep_md: true
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -23,11 +19,10 @@ library(mvtnorm)
 #### *Koji MAKIYAMA (@hoxo-m)*
 
 <!-- badges: start -->
-[![Travis-CI Build Status](https://travis-ci.org/hoxo-m/densratio.svg?branch=master)](https://travis-ci.org/hoxo-m/densratio)
 [![CRAN Version](https://www.r-pkg.org/badges/version/densratio)](https://CRAN.R-project.org/package=densratio)
 [![CRAN Downloads](https://cranlogs.r-pkg.org/badges/densratio)](https://CRAN.R-project.org/package=densratio)
+[![R-CMD-check](https://github.com/hoxo-m/densratio/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/hoxo-m/densratio/actions/workflows/R-CMD-check.yaml)
 [![Coverage Status](https://coveralls.io/repos/github/hoxo-m/densratio/badge.svg?branch=master)](https://coveralls.io/github/hoxo-m/densratio?branch=master)
-[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/hoxo-m)
 <!-- badges: end -->
 
 ## 1. Overview
