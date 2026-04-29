@@ -1,4 +1,4 @@
-# densratio 0.3.0
+# densratio 0.3.1
 
 ## Bug fixes
 

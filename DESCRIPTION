@@ -1,18 +1,19 @@
-Package: densratio
 Type: Package
-Version: 0.3.0
+Package: densratio
 Title: Density Ratio Estimation
-Description: Density ratio estimation.
-    The estimated density ratio function can be used in many applications such as
-    anomaly detection, change-point detection, covariate shift adaptation.
-    The implemented methods are uLSIF (Hido et al. (2011) <doi:10.1007/s10115-010-0283-2>),
-    RuLSIF (Yamada et al. (2011) <doi:10.1162/NECO_a_00442>),
-    and KLIEP (Sugiyama et al. (2007) <doi:10.1007/s10463-008-0197-x>).
+Version: 0.3.1
 Authors@R:
-    person("Koji", "Makiyama", , "hoxo.smile@gmail.com", c("aut", "cre"))
+    person("Koji", "Makiyama", , "hoxo.smile@gmail.com", role = c("aut", "cre"))
+Description: Density ratio estimation.  The estimated density ratio
+    function can be used in many applications such as anomaly detection,
+    change-point detection, covariate shift adaptation.  The implemented
+    methods are uLSIF (Hido et al. (2011)
+    <doi:10.1007/s10115-010-0283-2>), RuLSIF (Yamada et al. (2011)
+    <doi:10.1162/NECO_a_00442>), and KLIEP (Sugiyama et al. (2007)
+    <doi:10.1007/s10463-008-0197-x>).
+License: MIT + file LICENSE
 URL: https://github.com/hoxo-m/densratio
 BugReports: https://github.com/hoxo-m/densratio/issues
-License: MIT + file LICENSE
 Imports:
     utils
 Suggests:
@@ -22,6 +23,7 @@ Suggests:
     rmarkdown,
     stats,
     testthat
-RoxygenNote: 7.3.3
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
+RoxygenNote: 7.3.3
