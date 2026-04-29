@@ -58,7 +58,7 @@ plot(new_x, w_hat, pch=19)
 ![](man/figures/README-compute-estimated-density-ratio-1.png)<!-- -->
 
 In this case, the true density ratio
-`w(x) = p(x)/q(y) = Norm(1, 1/8) / Norm(1, 1/2)` is known. So we can
+`w(x) = p(x)/q(x) = Norm(1, 1/8) / Norm(1, 1/2)` is known. So we can
 compare `w(x)` with the estimated density ratio `w-hat(x)`.
 
 ``` r
@@ -125,7 +125,7 @@ plot(new_x, w_hat, pch=19)
 ### 3.2 Methods
 
 `densratio()` has `method` argument that you can pass `"uLSIF"`,
-`"RuSLIF"`, or `"KLIEP"`.
+`"RuLSIF"`, or `"KLIEP"`.
 
 - **uLSIF** (unconstrained Least-Squares Importance Fitting) is the
   default method. This algorithm estimates density ratio by minimizing
@@ -139,13 +139,13 @@ plot(new_x, w_hat, pch=19)
   algorithm estimates density ratio by minimizing Kullback-Leibler
   divergence. You can find more information in \[Sugiyama et al. 2007\].
 
-The methods assume that density ratio are represented by linear model:
+The methods assume that density ratios are represented by linear model:
 
 - `w(x) = theta_1 * K(x, c_1) + theta_2 * K(x, c_2) + ... + theta_b * K(x, c_b)`
 
 where
 
-- `K(x, c) = exp(-||x - c||^2 / 2 * sigma^2)`
+- `K(x, c) = exp(-||x - c||^2 / (2 * sigma^2))`
 
 is the Gaussian (RBF) kernel.
 
