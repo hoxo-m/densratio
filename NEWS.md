@@ -1,4 +1,4 @@
-# densratio (development version)
+# densratio 0.3.0
 
 ## Bug fixes
 
