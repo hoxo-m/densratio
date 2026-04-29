@@ -55,7 +55,7 @@ w_hat <- densratio_obj$compute_density_ratio(new_x)
 plot(new_x, w_hat, pch=19)
 ```
 
-![](man/figures/README-compute-estimated-density-ratio-1.png)<!-- -->
+<img src="man/figures/README-compute-estimated-density-ratio-1.png" alt="" width="500" />
 
 In this case, the true density ratio
 `w(x) = p(x)/q(x) = Norm(1, 1/8) / Norm(1, 1/2)` is known. So we can
@@ -69,7 +69,7 @@ plot(densratio_obj$compute_density_ratio, xlim=c(0, 2), lwd=2, col="green", add=
 legend("topright", legend=c(expression(w(x)), expression(hat(w)(x))), col=2:3, lty=1, lwd=2, pch=NA)
 ```
 
-![](man/figures/README-compare-true-estimate-1.png)<!-- -->
+<img src="man/figures/README-compare-true-estimate-1.png" alt="" width="500" />
 
 ## 2. Installation
 
@@ -120,7 +120,7 @@ w_hat <- densratio_obj$compute_density_ratio(new_x)
 plot(new_x, w_hat, pch=19)
 ```
 
-![](man/figures/README-basics-compute-estimated-density-ratio-1.png)<!-- -->
+<img src="man/figures/README-basics-compute-estimated-density-ratio-1.png" alt="" width="500" />
 
 ### 3.2 Methods
 
@@ -255,9 +255,27 @@ contour(range, range, w_true, main = "True Density Ratio")
 contour(range, range, w_hat, main = "Estimated Density Ratio")
 ```
 
-![](man/figures/README-compare-2d-1.png)<!-- -->
+<img src="man/figures/README-compare-2d-1.png" alt="" width="700" />
 
-## 5. Related work
+## 5. Used in research
+
+The **densratio** package has been used in several research papers,
+including:
+
+- Fricke, K.R., & Herzberg, P.Y. (2019). Know your big data: De-biasing
+  subsamples of large datasets for personality research using importance
+  sampling and kNN matching.
+- Chen, M.F., Goel, K., Sohoni, N.S., Poms, F., Fatahalian, K., &
+  R’e, C. (2021). Mandoline: Model Evaluation under Distribution Shift.
+  *International Conference on Machine Learning.*
+- Evans, C., & G’Sell, M. (2024). Sequential label shift detection in
+  classification data: An application to dengue fever. *PLOS ONE, 19.*
+- Chakraborty, A., Huan, X., & Catanach, T.A. (2024). A Likelihood-Free
+  Approach to Goal-Oriented Bayesian Optimal Experimental Design.
+- Awaya, N., Xu, Y., & Ma, L. (2025). Two-sample comparison through
+  additive tree models for density ratios.
+
+## 6. Related work
 
 - A Python Package for Density Ratio Estimation
   - <https://pypi.org/project/densratio/>

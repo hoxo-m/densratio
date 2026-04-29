@@ -9,6 +9,10 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
+  dpi = 192,
+  fig.width = 5,
+  fig.height = 4,
+  out.width = 500,
   message = FALSE
 )
 library(mvtnorm)
@@ -185,7 +189,7 @@ densratio_obj_2d
 
 In this case, as well, we can compare the true density ratio with the estimated density ratio.
 
-```{r compare-2d, fig.width=7, fig.height=4}
+```{r compare-2d, fig.width=7, fig.height=4, out.width = 700}
 true_density_ratio <- function(x) {
   dmvnorm(x, mean = c(1, 1), sigma = diag(1/8, 2)) /
     dmvnorm(x, mean = c(1, 1), sigma = diag(1/2, 2))
@@ -202,7 +206,17 @@ contour(range, range, w_true, main = "True Density Ratio")
 contour(range, range, w_hat, main = "Estimated Density Ratio")
 ```
 
-## 5. Related work
+## 5. Used in research
+
+The **densratio** package has been used in several research papers, including:
+
+- Fricke, K.R., & Herzberg, P.Y. (2019). Know your big data: De-biasing subsamples of large datasets for personality research using importance sampling and kNN matching.
+- Chen, M.F., Goel, K., Sohoni, N.S., Poms, F., Fatahalian, K., & R'e, C. (2021). Mandoline: Model Evaluation under Distribution Shift. *International Conference on Machine Learning.*
+- Evans, C., & G’Sell, M. (2024). Sequential label shift detection in classification data: An application to dengue fever. *PLOS ONE, 19.*
+- Chakraborty, A., Huan, X., & Catanach, T.A. (2024). A Likelihood-Free Approach to Goal-Oriented Bayesian Optimal Experimental Design.
+- Awaya, N., Xu, Y., & Ma, L. (2025). Two-sample comparison through additive tree models for density ratios.
+
+## 6. Related work
 
 - A Python Package for Density Ratio Estimation
     - https://pypi.org/project/densratio/
