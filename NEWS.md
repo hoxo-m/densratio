@@ -1,4 +1,14 @@
-# densratio 0.2.0
+# deltatest (development version)
+
+## Bug fixes
+
+* Fix `KLIEP()` so that `compute_density_ratio()` evaluates density ratios for the input data passed to the function, rather than reusing the training data (#13).
+
+## Documentation
+
+* Fix minor typos and clarify the Gaussian kernel formula in the README.
+
+# densratio 0.2.1
 
 ## New feature
 
