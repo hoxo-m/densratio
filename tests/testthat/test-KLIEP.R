@@ -18,3 +18,16 @@ test_that("KLIEP", {
   expect_equal(head(kernel_weights), expected_kernel_weights)
   expect_equal(sigma, 0.09)
 })
+
+test_that("KLIEP compute_density_ratio uses new input", {
+  set.seed(3)
+  x1 <- rnorm(200, mean = 1, sd = 1 / 8)
+  x2 <- rnorm(200, mean = 1, sd = 1 / 2)
+
+  fit <- KLIEP(x1, x2, sigma = 0.1, verbose = FALSE)
+
+  new_x <- seq(0, 2, length.out = 11)
+  pred <- fit$compute_density_ratio(new_x)
+
+  expect_length(pred, length(new_x))
+})
