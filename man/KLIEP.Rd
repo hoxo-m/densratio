@@ -4,8 +4,7 @@
 \alias{KLIEP}
 \title{Estimate Density Ratio p(x)/q(x) by KLIEP (Kullback-Leibler Importance Estimation Procedure)}
 \usage{
-KLIEP(x1, x2, sigma = "auto", kernel_num = 100, fold = 5,
-  verbose = TRUE)
+KLIEP(x1, x2, sigma = "auto", kernel_num = 100, fold = 5, verbose = TRUE)
 }
 \arguments{
 \item{x1}{numeric vector or matrix. Data from a numerator distribution p(x).}

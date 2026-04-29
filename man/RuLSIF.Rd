@@ -5,9 +5,15 @@
 \title{Estimate alpha-Relative Density Ratio p(x)/(alpha p(x) + (1-alpha) q(x))
 by RuLSIF (Relative unconstrained Least-Square Importance Fitting)}
 \usage{
-RuLSIF(x1, x2, sigma = 10^seq(-3, 1, length.out = 9),
-  lambda = 10^seq(-3, 1, length.out = 9), alpha = 0.1,
-  kernel_num = 100, verbose = TRUE)
+RuLSIF(
+  x1,
+  x2,
+  sigma = 10^seq(-3, 1, length.out = 9),
+  lambda = 10^seq(-3, 1, length.out = 9),
+  alpha = 0.1,
+  kernel_num = 100,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{x1}{numeric vector or matrix. Data from a numerator distribution p(x).}
