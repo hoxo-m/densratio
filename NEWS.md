@@ -1,4 +1,4 @@
-# deltatest (development version)
+# densratio (development version)
 
 ## Bug fixes
 
