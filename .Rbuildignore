@@ -6,3 +6,6 @@
 ^README.Rmd$
 ^\.travis\.yml$
 ^README_.+$
+^\.positai$
+^\.claude$
+^\.github$
