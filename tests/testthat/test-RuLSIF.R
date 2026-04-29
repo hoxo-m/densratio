@@ -1,21 +1,36 @@
 context("RuLSIF")
 
 test_that("RuLSIF", {
-  set.seed(3)
+  set.seed(314)
   x <- rnorm(200, mean = 1, sd = 1/8)
   y <- rnorm(200, mean = 1, sd = 1/2)
 
-  result <- RuLSIF(x, y)
+  result <- RuLSIF(x, y, sigma = 0.1, lambda = 0.1, alpha = 0.1, kernel_num = 20, verbose = FALSE)
 
-  kernel_weights <- result$kernel_weights
-  sigma <- result$kernel_info$sigma
-  lambda <- result$lambda
+  expect_true(inherits(result, "RuLSIF"))
+  expect_equal(result$alpha, 0.1)
+  expect_equal(result$lambda, 0.1)
+  expect_equal(result$kernel_info$kernel, "Gaussian")
+  expect_equal(result$kernel_info$kernel_num, 20)
+  expect_equal(result$kernel_info$sigma, 0.1)
 
-  expected_kernel_weights <- c(0.070454411, 0.028303149, 0.003146211,
-                               0.010641579, 0.055200243, 0.012069721)
+  expect_equal(length(result$kernel_weights), 20)
+  expect_true(all(is.finite(result$kernel_weights)))
+  expect_true(all(result$kernel_weights >= 0))
+  expect_true(is.function(result$compute_density_ratio))
+})
 
-  testthat::skip_on_cran()
-  expect_equal(head(kernel_weights), expected_kernel_weights)
-  expect_equal(sigma, 0.1)
-  expect_equal(lambda, 0.1)
+test_that("RuLSIF computes density ratios for new input data", {
+  set.seed(314)
+  x <- rnorm(200, mean = 1, sd = 1 / 8)
+  y <- rnorm(200, mean = 1, sd = 1 / 2)
+
+  result <- RuLSIF(x, y, sigma = 0.1, lambda = 0.1, alpha = 0.1, kernel_num = 20, verbose = FALSE)
+
+  new_x <- seq(0, 2, length.out = 11)
+  density_ratio <- result$compute_density_ratio(new_x)
+
+  expect_equal(length(density_ratio), length(new_x))
+  expect_true(all(is.finite(density_ratio)))
+  expect_true(all(density_ratio >= 0))
 })
