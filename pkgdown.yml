@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.0
+pkgdown_sha: ~
+articles:
+  densratio: densratio.html
+last_built: 2026-05-01T16:31Z
+urls:
+  reference: http://hoxo-m.github.io/densratio/reference
+  article: http://hoxo-m.github.io/densratio/articles

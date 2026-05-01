@@ -1,0 +1,4 @@
+# License
+
+    YEAR: 2016-2019
+    COPYRIGHT HOLDER: Koji MAKIYAMA
