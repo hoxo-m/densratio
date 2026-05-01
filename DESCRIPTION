@@ -12,7 +12,7 @@ Description: Density ratio estimation.  The estimated density ratio
     <doi:10.1162/NECO_a_00442>), and KLIEP (Sugiyama et al. (2007)
     <doi:10.1007/s10463-008-0197-x>).
 License: MIT + file LICENSE
-URL: https://github.com/hoxo-m/densratio
+URL: https://github.com/hoxo-m/densratio, http://hoxo-m.github.io/densratio/
 BugReports: https://github.com/hoxo-m/densratio/issues
 Imports:
     utils
